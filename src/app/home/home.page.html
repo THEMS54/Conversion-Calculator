@@ -7,100 +7,24 @@
 <ion-content [fullscreen]="true" class="content-background">
   <div id="mainContent">
     <div class="mainContainer">
-      <div class="title-text">
-        <strong>Choose your conversion metric</strong>
-      </div>
-      <div class="conversion-container">
-        <div class="conversion-form">
-          <div class="metric-select-wrapper">
-            <ion-select
-              [value]="selectedMetric"
-              [(ngModel)]="selectedMetric"
-              class="metric-selector"
-              interface="popover"
-              label="Metric"
-              mode="ios"
-              label-placement="floating"
-              (ionChange)="onMetricChange()"
-            >
-              <ion-select-option
-                *ngFor="let metric of metricList"
-                [value]="metric"
-                >{{ metric }}</ion-select-option
-              >
-            </ion-select>
-          </div>
-          <div class="metric-unit-container" *ngIf="selectedMetric.length > 0">
-            <div class="unit-input-select-wrapper">
-              <ion-input
-                type="text"
-                class="metric-input"
-                [(ngModel)]="selectedUnit1Value"
-                (ngModelChange)="convertUnit1($event)"
-                [ngClass]="{ 'metric-converted-input': isUnit1Output }"
-              ></ion-input>
-              <ion-select
-                [value]="selectedUnit1"
-                [(ngModel)]="selectedUnit1"
-                class="metric-selector"
-                interface="popover"
-                label="Unit"
-                mode="ios"
-                label-placement="floating"
-                (ionChange)="onUnitChange('unit1')"
-              >
-                <ion-select-option
-                  *ngFor="let unit of selectedMetricUnits"
-                  [value]="unit"
-                  >{{ unit }}</ion-select-option
-                >
-              </ion-select>
-            </div>
-            <div class="equals-symbol-container">
-              <strong>=</strong>
-            </div>
-            <div class="unit-input-select-wrapper">
-              <ion-input
-                style="border-radius: 6px"
-                type="text"
-                class="metric-input"
-                [(ngModel)]="selectedUnit2Value"
-                (ngModelChange)="convertUnit2($event)"
-                [ngClass]="{ 'metric-converted-input': isUnit2Output }"
-              ></ion-input>
-              <ion-select
-                class="metric-selector"
-                [value]="selectedUnit2"
-                [(ngModel)]="selectedUnit2"
-                interface="popover"
-                label="Unit"
-                mode="ios"
-                label-placement="floating"
-                (ionChange)="onUnitChange('unit2')"
-              >
-                <ion-select-option
-                  *ngFor="let unit of selectedMetricUnits"
-                  [value]="unit"
-                  >{{ unit }}</ion-select-option
-                >
-              </ion-select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="metric-description-container"
-        *ngIf="selectedMetricDescription"
-      >
-        <h1>{{selectedMetricDescription.header}}</h1>
-
-        <div class="desc-list-wrapper">
-          <ul>
-            <div *ngFor="let item of selectedMetricDescription.list">
-              <li>{{item}}</li>
-            </div>
-          </ul>
-        </div>
+      <div class="home-card">
+        <h1>Convert Units Quickly</h1>
+        <p>
+          Open the conversion workspace to switch between units for length,
+          temperature, area, volume, mass, speed, frequency, time, pressure, and
+          energy.
+        </p>
+        <ion-button
+          [routerLink]="['/conversion']"
+          [state]="{ fromHome: true }"
+          expand="block"
+          size="default"
+        >
+          Open Converter
+        </ion-button>
+        <p class="hint-text">
+          Tip: Use the back button in the converter to return here.
+        </p>
       </div>
     </div>
   </div>
@@ -108,6 +32,10 @@
 
 <ion-footer [translucent]="true">
   <ion-toolbar style="background-color: #051937">
-    <!-- <div style="color: #fff;display: flex;justify-content: flex-end;padding-right: 15px;"> About US </div> -->
+    <ion-buttons slot="end">
+      <ion-button fill="clear" class="footer-link" routerLink="/about"
+        >About Us</ion-button
+      >
+    </ion-buttons>
   </ion-toolbar>
 </ion-footer>

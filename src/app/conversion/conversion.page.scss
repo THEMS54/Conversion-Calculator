@@ -1,0 +1,218 @@
+ion-content {
+  --ion-background-color: linear-gradient(
+    to right,
+    #d3d3d3,
+    #ffffff
+  ) !important;
+}
+
+#mainContent {
+  background: linear-gradient(to right, #d3d3d3, #ffffff) !important;
+  width: 100%;
+  height: 100%;
+
+  .mainContainer {
+    margin: 0 20px 50px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title-text {
+    padding-top: 15px;
+    color: #051937;
+  }
+
+  .conversion-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .conversion-form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+    box-shadow: 0 32px 32px 0 rgba(38, 50, 56, 0.32);
+    padding: 20px;
+  }
+
+  .metric-select-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .metric-selector {
+    width: 200px;
+    border: 1px solid #051937;
+    margin-top: 5px;
+  }
+
+  .metric-unit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .unit-input-select-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .equals-symbol-container {
+    margin: 0 20px;
+    font-size: 30px;
+  }
+
+  .metric-input {
+    border: 2px solid #051937;
+    border-radius: 6px;
+    height: 40px;
+    min-height: 40px;
+    width: 200px;
+  }
+
+  .metric-converted-input {
+    background-color: #f0f8ff;
+  }
+
+  .metric-description-container {
+    color: #051937;
+    text-align: justify;
+    padding-bottom: 56px;
+
+    h1 {
+      font-size: 16px;
+      text-align: center;
+      margin-left: 20px;
+      margin-top: 30px;
+      margin-bottom: 0;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: square;
+    }
+
+    li {
+      font-size: 12px;
+    }
+  }
+
+  .desc-list-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+ion-select {
+  font-size: 12px !important;
+  max-height: 40px !important;
+  border-radius: 6px;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 10px;
+
+  ion-label {
+    -webkit-flex: none !important;
+    flex: none !important;
+  }
+
+  .select-wrapper-inner {
+    width: 100%;
+  }
+
+  .select-text {
+    flex: none;
+  }
+
+  &::part(container) {
+    width: 100%;
+  }
+}
+
+ion-select-popover ion-list ion-item {
+  font-size: 12px !important;
+  --border-color: white !important;
+  --background: #051937 !important;
+  color: #fff;
+}
+
+ion-select-popover {
+  padding: 10px 0 !important;
+  height: 235px !important;
+}
+
+ion-select::part(text) {
+  text-align: left;
+}
+
+ion-popover::part(content) {
+  width: 220px !important;
+}
+
+ion-radio::part(mark) {
+  border-color: #051937 !important;
+}
+
+ion-toolbar {
+  --background: #051937;
+}
+
+ion-back-button {
+  --color: #fff;
+}
+
+ion-back-button .icon-inner {
+  color: #fff;
+}
+
+ion-button.footer-link {
+  --background: transparent;
+  --color: #fff;
+  text-transform: none;
+}
+
+.ion-valid.sc-ion-input-md-h {
+  --highlight-color: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #mainContent {
+    .mainContainer {
+      margin: 0;
+    }
+  }
+
+  .conversion-container {
+    margin: 0 10px 20px 10px !important;
+  }
+
+  .conversion-form {
+    width: auto !important;
+    padding: 15px !important;
+  }
+
+  .equals-symbol-container {
+    margin: 10px 0 !important;
+  }
+
+  .metric-unit-container {
+    flex-direction: column !important;
+  }
+
+  .metric-description-container {
+    h1 {
+      text-align: left;
+    }
+  }
+
+  ion-select {
+    font-size: 14px !important;
+  }
+}
