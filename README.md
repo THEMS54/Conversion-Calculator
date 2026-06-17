@@ -24,29 +24,34 @@ Quick start
    npm install
 
 2. Run the app in development:
-    ng serve
-or with Ionic:
-    ionic serve
+   ```sh
+   ng serve
+   or with Ionic:
+   ionic serve
 
-Build for production
+3. Build for production
+   ```sh
     npm run build
-    # or
+    or
     ng build --prod
 
 Capacitor / native
-
-Sync web build to native projects:
+- Sync web build to native projects:
+  ```sh
     npx cap sync
-Open Android:
+- Open Android:
+  ```sh
     npx cap open android
-Testing
+- Testing
     Run unit tests (Karma + Jasmine):
+  ```sh
         ng test
-Configuration and code pointers
 
-Component bootstrap: see AppModule.
-Root component: see AppComponent.
-Test config: karma.conf.js and TypeScript test config: tsconfig.spec.json
-License
+Configuration and code pointers
+- Component bootstrap: see AppModule.
+- Root component: see AppComponent.
+- Test config: karma.conf.js and TypeScript test config: tsconfig.spec.json
+
+**License**
 
 MIT (follow project / dependency licenses)
