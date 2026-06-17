@@ -14,8 +14,8 @@
         <div class="conversion-form">
           <div class="metric-select-wrapper">
             <ion-select
-              [(ngModel)]="selectedMetric"
               [value]="selectedMetric"
+              [(ngModel)]="selectedMetric"
               class="metric-selector"
               interface="popover"
               label="Metric"
@@ -40,6 +40,7 @@
                 [ngClass]="{ 'metric-converted-input': isUnit1Output }"
               ></ion-input>
               <ion-select
+                [value]="selectedUnit1"
                 [(ngModel)]="selectedUnit1"
                 class="metric-selector"
                 interface="popover"
@@ -69,6 +70,7 @@
               ></ion-input>
               <ion-select
                 class="metric-selector"
+                [value]="selectedUnit2"
                 [(ngModel)]="selectedUnit2"
                 interface="popover"
                 label="Unit"
